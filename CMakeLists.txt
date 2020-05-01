@@ -11,6 +11,9 @@ set(DEVICE_FAMILY "1,2")
 set(DEPLOYMENT_TARGET 8.0 CACHE STRING "")
 set(CODE_SIGN_IDENTITY "iPhone Developer")
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -miphoneos-version-min=8.1 -fvisibility=hidden -fvisibility-inlines-hidden")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -miphoneos-version-min=8.1 -fvisibility=hidden -fvisibility-inlines-hidden")
+
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
 endif(NOT CMAKE_BUILD_TYPE)
